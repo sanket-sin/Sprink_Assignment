@@ -14,7 +14,7 @@ const HomeScreen = () =>{
                     <View style={style.categoryImage}>
                     <Text style={style.edit}>4</Text>
                     </View>
-                <Text style={style.title}>Edit Food Preferences</Text>
+                <Text style={style.title}> Edit Food Preferences </Text>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity>
@@ -26,7 +26,7 @@ const HomeScreen = () =>{
             <TouchableOpacity>
                 <View style={ style.categoryBtN}>
                 <View style={style.categoryImage}></View>
-                <Text style={style.title}>Protein Preferences</Text>
+                <Text style={style.title}> Protein Preferences </Text>
                 </View>
             </TouchableOpacity>
         </ScrollView>
@@ -36,7 +36,8 @@ const HomeScreen = () =>{
 const style = StyleSheet.create({
     category: {
         paddingVertical: 0,
-        alignItems:'top',
+        top: 0,
+        // alignItems:'top',
         paddingHorizontal:20,
     },
     categoryImage:{
@@ -69,8 +70,9 @@ const style = StyleSheet.create({
     },
     title: {
         color: COLORS.black,
-        fontWeight: 400,
+        fontWeight: '400',
         fontSize:18,
+        
         paddingLeft:10
 
     },

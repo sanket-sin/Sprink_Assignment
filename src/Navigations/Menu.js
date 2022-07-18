@@ -13,8 +13,7 @@ export default function Menu ({navigation}) {
                 style={{
                     fontSize:26,
                     fontWeight: 'bold',
-                }} Menu Screen
-            ></Text>
+                }}> Menu Screen </Text>
         </View>
     )
 }

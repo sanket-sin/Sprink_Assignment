@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A static react native application built with expo-cli",
+    "githubUrl": "https://github.com/sanket-sin/Sprink_Assignment"
   }
 }

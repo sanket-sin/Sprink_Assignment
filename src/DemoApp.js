@@ -42,7 +42,8 @@ const  DemoApp = ()  =>   {
       </Text>
 
       <PrimaryButton
-      title="Show Pricing and Plans"style={{marginBottom:30}} ></PrimaryButton> </View>     
+      title="Show Pricing and Plans"style={{marginBottom:30}} ></PrimaryButton>
+       </View>     
     </View>
     
     <NavigationContainer>
@@ -94,7 +95,7 @@ const  DemoApp = ()  =>   {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'end',
+      justifyContent: 'flex-end',
       marginHorizontal: 16,
       marginBottom:20
 

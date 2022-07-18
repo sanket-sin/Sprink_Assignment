@@ -13,8 +13,8 @@ export default function Home ({navigation}) {
                 style={{
                     fontSize:25,
                     fontWeight: 'bold',
-                }} Home Screen
-            ></Text>
+                }}
+            >  Home Screen </Text>
         </View>
     )
 }

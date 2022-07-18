@@ -9,12 +9,12 @@ const Cart = () => {
         return <View style={style.cardCarts}>
 
             <View style={{
-                height:100,
+                height:500,
                  marginLeft:10,
                 paddingVertical:20,
                 flex:1}}>
                     
-                    <Text style={{ fontSize:18}}> {item.time}</Text>
+                    <Text style={{ fontSize:18}}> {item.time} </Text>
                     <Text style={{fontWeight:'bold', fontSize:30,}}> {item.name}</Text>
                     <Text style={{ fontSize:20 ,fontStyle:'italic',color: COLORS.yellow}}> {item.cate}</Text>
                     <Text style={{ fontSize:18,fontWeight:'bold', color: COLORS.grey,marginTop:5}}> {item.ingredients}</Text>
@@ -29,7 +29,7 @@ const Cart = () => {
             </View>
             
             <View style={{marginRight:30, alignItems: 'center'}}>
-                        <Text style={{fontSize:16,marginTop:15,fontWeight:'light'}}> {item.lab}</Text>
+                        <Text style={{fontSize:16,marginTop:15,fontWeight:'200'}}> {item.lab}</Text>
                         <Text style={{fontSize:23,fontWeight:'normal'}}>₹{item.price}</Text>
                     </View>
         </View>;
@@ -58,8 +58,9 @@ const style = StyleSheet.create({
         // marginVertical:10,
         marginTop:20, 
         paddingHorizontal:10,
+        top: 0,
         flexDirection: 'row',
-        alignItems: 'top',
+        // alignItems: 'top',
         color:COLORS.red,
     }
 });

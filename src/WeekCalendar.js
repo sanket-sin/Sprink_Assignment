@@ -17,8 +17,9 @@ const styles = StyleSheet.create({
     calendar: {
       flex: 1,
       backgroundColor: '#fff',
-      alignItems: 'top',
-      justifyContent: 'top',
+      // alignItems: 'top',
+      top:0,
+      // justifyContent: 'top',
       marginBottom: 130 
     },
 });

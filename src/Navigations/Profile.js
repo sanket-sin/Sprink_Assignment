@@ -13,8 +13,8 @@ export default function Profile ({navigation}) {
                 style={{
                     fontSize:25,
                     fontWeight: 'bold',
-                }} Profile Screen
-            ></Text>
+                }} 
+            > Profile Screen </Text>
         </View>
     )
 }

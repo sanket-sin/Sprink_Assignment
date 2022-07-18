@@ -13,8 +13,8 @@ export default function MoreOption ({navigation}) {
                 style={{
                     fontSize:15,
                     fontWeight: 'bold',
-                }} Profile Screen
-            ></Text>
+                }} 
+            > Profile Screen </Text>
         </View>
     )
 }
