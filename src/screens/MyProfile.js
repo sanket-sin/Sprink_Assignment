@@ -1,21 +1,21 @@
-import * as  React from 'react';
+import  React from 'react';
 import {View, Text} from 'react-native';
 
-export default function Home ({navigation}) {
+const MyProfile = () => {
     return (
+        
         <View style={{
             flex:1,
             alignItems:'center',
             justifyContent:'center',
         }}>
             <Text
-                onPress={() => alert('This is Home Screen ')}
                 style={{
                     fontSize:25,
                     fontWeight: 'bold',
-                }}
-            > </Text>
+                }} 
+            >   </Text>
         </View>
     )
 }
-export  {Home};
+export default MyProfile;

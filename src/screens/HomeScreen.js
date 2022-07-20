@@ -1,65 +1,138 @@
 import React from 'react'
-import { ScrollView, TouchableNativeFeedbackComponent, TouchableOpacity,StyleSheet,View,Text } from 'react-native'
+import { ScrollView, TouchableNativeFeedbackComponent,SafeAreaView, TouchableOpacity,StyleSheet,View,Text } from 'react-native'
 import COLORS from '../consts/Colors';
+import {PrimaryButton} from '../Button';
+import IonIcons from 'react-native-vector-icons/Ionicons';
+import Cart from '../screens/Cart'
+import WeeklyCalendar from 'react-native-weekly-calendar';
+import {WeekCalendar} from '../WeekCalendar';
 
 const HomeScreen = () =>{
     return (
-        <ScrollView 
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={style.category}>
+        
+    <View style={style.container}>
+        
+    <View>
+      
+    </View>
+        <ScrollView style={{top:10,height:10,}}
+                
+                
+                contentContainerStyle={style.category}>
+                    <WeekCalendar></WeekCalendar>
+
+                    <ScrollView horizontal style={{marginBottom:5}}>
+                    <TouchableOpacity>
+                        <View style={ style.categoryBtn}>
+                            <View style={style.categoryImage}>
+                                <Text style={style.edit}>4</Text>
+                            </View>
+                            <Text style={style.titl}>
+                                 Edit Food Preferences
+                                 
+                        
+                            </Text>
+                            <IonIcons name="options"  size={20} style={{marginLeft:8,marginTop:4}} /> 
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity>
+                        <View style={ style.categoryBtns}>
+                        {/* <View style={style.categoryImage}></View> */}
+                        <Text style={style.titl}>Cuisines
+                        
+                        </Text>
+                        <IonIcons name="chevron-down"  size={20} style={{marginLeft:8,marginTop:4}} />
+                        
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity>
+                        <View style={ style.categoryBtN}>
+                        <Text style={style.titl}> Protein Preferences </Text>
+                        </View>
+                    </TouchableOpacity>
+                    </ScrollView>
+                    
+                        
+            <Cart></Cart>            
             
-            <TouchableOpacity>
-                <View style={ style.categoryBtn}>
-                    <View style={style.categoryImage}>
-                    <Text style={style.edit}>4</Text>
-                    </View>
-                <Text style={style.title}> Edit Food Preferences </Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <View style={ style.categoryBtns}>
-                <View style={style.categoryImage}></View>
-                <Text style={style.title}>Cuisines</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <View style={ style.categoryBtN}>
-                <View style={style.categoryImage}></View>
-                <Text style={style.title}> Protein Preferences </Text>
-                </View>
-            </TouchableOpacity>
-        </ScrollView>
+        <View style={style.topBox}>
+        
+        <Text style={style.tit}>
+            These dishes are served as part of the subscription.
+        </Text>
+        <PrimaryButton
+            onPress={() => navigation.navigate('DemoApp')}
+            title="Show Pricing and Plans"style={{marginBottom:30}}>
+        </PrimaryButton>        
+    </View> 
+
+      
+
+            </ScrollView>
+            
+    </View>               
+
+        
     )
 };
 
 const style = StyleSheet.create({
+    topBox:{
+        top:-30
+    },
     category: {
         paddingVertical: 0,
         top: 0,
         // alignItems:'top',
-        paddingHorizontal:20,
+        paddingHorizontal:10,
     },
+    
     categoryImage:{
-        height:35,
-        width:35,
+        height:25,
+        width:25,
         borderRadius:35,
         backgroundColor:COLORS.babyBlue,
 
     },
+    container: {
+        flex: 1,
+        width: 360,
+        height:800    
+        },
+    
+    tit: {
+    textAlign: 'center',
+    borderRadius: 25,
+    fontSize: 12,
+    fontWeight: 'bold',
+    top: -10,
+    },
+
+    button: {
+        borderRadius: 125,
+        },
+        title: {
+        textAlign: 'center',
+        borderRadius: 25,
+        fontSize: 12,
+        fontWeight: 'bold',
+        },
+        
     edit:{
       color  :COLORS.black,
       fontWeight: 'bold',
         fontSize:18,
-        paddingHorizontal:10,
-        paddingVertical:2
+        paddingHorizontal:7,
+        paddingVertical:1
 
     },
     categoryBtn: {
-        height:45,
+        height:35,
         width:260,
         backgroundColor: COLORS.white,
-        marginRight:7,
+        marginRight:4,
         borderRadius:30,
         alignItems:'center',
         paddingHorizontal:5,
@@ -68,20 +141,18 @@ const style = StyleSheet.create({
         borderColor:COLORS.aqua
         
     },
-    title: {
+    titl: {
         color: COLORS.black,
         fontWeight: '400',
         fontSize:18,
-        
         paddingLeft:10
-
     },
     
     categoryBtns: {
-        height:45,
-        width:140,
+        height:35,
+        width:130,
         backgroundColor: COLORS.white,
-        marginRight:7,
+        marginRight:4,
         borderRadius:30,
         alignItems:'center',
         paddingHorizontal:5,
@@ -92,8 +163,8 @@ const style = StyleSheet.create({
     },
     
     categoryBtN: {
-        height:45,
-        width:220,
+        height:35,
+        width:200,
         backgroundColor: COLORS.white,
         marginRight:7,
         borderRadius:30,

@@ -1,58 +1,61 @@
-// import React from 'react';
-// // import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-// import Icon from 'react-native-vector-icons/MaterialIcons';
-// import COLORS from './consts/Colors';
-// import MyProfile from './screens/MyProfile';
-// import ViewMenu from './screens/ViewMenu';
-// import More from './screens/More';
-// import HomeScreen from './screens/HomeScreen';
+import 'react-native-gesture-handler';
+import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import COLORS from '../src/consts/Colors';
+import IonIcons from 'react-native-vector-icons/Ionicons';
+import { HomeScreen } from './screens/HomeScreen';
+import { StyleSheet} from 'react-native';
+import {MyOption} from './screens/MyMoreOption';
+import {MyMenu} from './screens/MyMenu';
+import MyProfile from './screens/MyProfile'
 
-// // const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
-// const BottomNavigator = () =>{
-//     return <Tab.Navigator
-//             tabBarOptions={{
-//                 style: {
-//                     height:55,
-//                     borderTopWidth:0,
-//                     elevation: 0,
-//                 },
-//                 showLabel:false,
-//                 activeTintColor: COLORS.blue,
-//             }}>
-//         <Tab.Screen 
-//         name="HomeScreen" 
-//         component={HomeScreen}
-//         options={{
-//             tabBarIcon: ({color}) =>( 
-//             <Icon name = "home-filled" color={color} size={28}></Icon>),
-//             }}>
-//         </Tab.Screen>
-//         <Tab.Screen 
-//         name="MyProfile" 
-//         component={MyProfile}
-//         options={{
-//             tabBarIcon: ({color}) =>( 
-//             <Icon name = "myprofile" color={color} size={28}></Icon>),
-//             }}>
-//         </Tab.Screen>
-//         <Tab.Screen 
-//         name="ViewMenu" 
-//         component={ViewMenu}
-//         options={{
-//             tabBarIcon: ({color}) =>( 
-//             <Icon name = "user" color={color} size={28}></Icon>),
-//             }}>
-//         </Tab.Screen>
-//         <Tab.Screen 
-//         name="More" 
-//         component={More}
-//         options={{
-//             tabBarIcon: ({color}) =>( 
-//             <Icon name = "More" color={color} size={28}></Icon>),
-//             }}>
-//         </Tab.Screen>
-//     </Tab.Navigator>;
-// }
+const BottomNavigator = () => {
+    return (
+        <Tab.Navigator style={styles.tab}
+        tabBarOptions={{
+            activeTintColor: COLORS.babyBlue,
+            inactiveTintColor: COLORS.grey
+        }}
+         screenOptions={{
+            headerShown:false,
+        }}>
+        <Tab.Screen  
+            name = "Home"
+            component = {HomeScreen}
+            options={{tabBarIcon: ({color,size}) => {
+            <IonIcons name="home-outline" color={color} size={size} />
+        }
+        }}
+        /> 
+        <Tab.Screen 
+            name = "MyMenu"
+            component = {MyMenu}
+            options={{tabBarIcon: ({color,size}) => {
+                <IonIcons name="restaurant-outline" color={color} size={size} />
+            }
+        }}
+        /> 
+        <Tab.Screen 
+            name = "More"
+            component = {MyOption}
+            options={{tabBarIcon: ({color,size}) => {
+                <IonIcons name="menu-outline" color={color} size={size} />
+            }}}
+        /> 
+        <Tab.Screen 
+            name = "My Profile"
+            component = {MyProfile}
+            options={{tabBarIcon: ({color,size}) => {
+                <IonIcons name="person-outline" color={color} size={'20'} />
+            }}}
+        /> 
+    </Tab.Navigator>)
+};
+const styles = StyleSheet.create({
+    tab: {
+    }
+})
 
-// export {BottomNavigator} ;
+export default BottomNavigator; 

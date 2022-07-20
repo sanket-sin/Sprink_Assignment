@@ -9,12 +9,12 @@ export default function MoreOption ({navigation}) {
             justifyContent:'center',
         }}>
             <Text
-                onPress={() => navigation.navigate('MoreOption')}
+                onPress={() => navigation.navigate('Profile')}
                 style={{
-                    fontSize:15,
+                    fontSize:25,
                     fontWeight: 'bold',
                 }} 
-            > Profile Screen </Text>
+            >  More Option Screen </Text>
         </View>
     )
 }
